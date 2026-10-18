@@ -1,0 +1,66 @@
+{
+  "_note": "ILLUSTRATIVE rules for a prototype. Not legal thresholds. In production these come from official scheme texts, drafted with AI help and signed off by a compliance owner.",
+  "programs": [
+    {
+      "id": "DK-AGRI-TRAINEE",
+      "name": "Agricultural trainee scheme (Denmark)",
+      "country": "DK",
+      "version": "2026-10-01",
+      "sectors": ["agriculture", "horticulture"],
+      "occupations": ["farm worker", "dairy farm worker", "pig farm worker", "greenhouse worker"],
+      "processing_weeks": 8,
+      "rules": [
+        {"id": "edu_field", "field": "education.field", "op": "in",
+         "value": ["agriculture", "animal science", "horticulture", "veterinary"],
+         "text": "Education must be in an agricultural field"},
+        {"id": "edu_level", "field": "education.eqf_level", "op": ">=", "value": 4,
+         "text": "Education at EQF level 4 or higher (vocational or above)"},
+        {"id": "experience", "field": "relevant_experience_years", "op": ">=", "value": 1,
+         "text": "At least 1 year of practical experience in agriculture"},
+        {"id": "english", "field": "languages.en", "op": "cefr>=", "value": "B1",
+         "text": "English at CEFR B1 or higher"}
+      ],
+      "required_documents": ["passport", "diploma", "transcript", "experience_letter"]
+    },
+    {
+      "id": "DK-SKILLED-LIST",
+      "name": "Skilled-work shortage list (Denmark)",
+      "country": "DK",
+      "version": "2026-10-01",
+      "sectors": ["manufacturing", "metal", "construction", "food production", "hospitality"],
+      "occupations": ["welder", "cnc operator", "carpenter", "baker", "chef", "butcher"],
+      "processing_weeks": 10,
+      "rules": [
+        {"id": "edu_level", "field": "education.eqf_level", "op": ">=", "value": 3,
+         "text": "Vocational education at EQF level 3 or higher"},
+        {"id": "occupation", "field": "occupation", "op": "in_program_occupations",
+         "text": "Trained occupation must be on the shortage list"},
+        {"id": "experience", "field": "relevant_experience_years", "op": ">=", "value": 2,
+         "text": "At least 2 years of experience in the trained occupation"},
+        {"id": "english", "field": "languages.en", "op": "cefr>=", "value": "A2",
+         "text": "English at CEFR A2 or higher"}
+      ],
+      "required_documents": ["passport", "vocational_certificate", "experience_letter"]
+    },
+    {
+      "id": "NO-SKILLED-WORKER",
+      "name": "Skilled worker permit (Norway)",
+      "country": "NO",
+      "version": "2026-10-01",
+      "sectors": ["manufacturing", "metal", "construction", "food production"],
+      "occupations": ["welder", "cnc operator", "carpenter", "butcher"],
+      "processing_weeks": 16,
+      "rules": [
+        {"id": "edu_level", "field": "education.eqf_level", "op": ">=", "value": 4,
+         "text": "Completed vocational education at EQF level 4 or higher"},
+        {"id": "occupation", "field": "occupation", "op": "in_program_occupations",
+         "text": "Trained occupation must match a recognised skilled trade"},
+        {"id": "experience", "field": "relevant_experience_years", "op": ">=", "value": 3,
+         "text": "At least 3 years of experience in the trade"},
+        {"id": "english", "field": "languages.en", "op": "cefr>=", "value": "B1",
+         "text": "English at CEFR B1 or higher"}
+      ],
+      "required_documents": ["passport", "vocational_certificate", "experience_letter", "credential_recognition"]
+    }
+  ]
+}

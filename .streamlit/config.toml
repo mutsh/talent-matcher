@@ -1,0 +1,13 @@
+# Hardened defaults for hosted use
+[server]
+headless = true
+enableXsrfProtection = true     # blocks cross-site form submissions
+enableCORS = true
+maxUploadSize = 5               # MB; CV uploads only
+
+[browser]
+gatherUsageStats = false
+
+[client]
+showErrorDetails = false        # never show stack traces to visitors
+toolbarMode = "viewer"          # hide developer menu options

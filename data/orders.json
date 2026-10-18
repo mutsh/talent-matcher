@@ -1,0 +1,28 @@
+{
+  "_note": "Synthetic employer orders. In production these are parsed from the employer's job description (LLM -> validated schema) and confirmed by the account manager.",
+  "orders": [
+    {"id": "O1", "employer": "Dairy farm, South Jutland", "country": "DK", "sector": "agriculture",
+     "occupation": "dairy farm worker", "headcount": 2, "start_date": "2027-01-15",
+     "required_skills": ["milking", "herd management"],
+     "nice_to_have_skills": ["tractor driving", "milking robots"],
+     "min_experience_years": 1, "min_english": "B1"},
+
+    {"id": "O2", "employer": "Steel fabricator, Kolding", "country": "DK", "sector": "metal",
+     "occupation": "welder", "headcount": 3, "start_date": "2027-01-05",
+     "required_skills": ["MIG welding", "steel fabrication"],
+     "nice_to_have_skills": ["blueprint reading", "TIG welding"],
+     "min_experience_years": 2, "min_english": "A2"},
+
+    {"id": "O3", "employer": "Industrial bakery, Aarhus", "country": "DK", "sector": "food production",
+     "occupation": "baker", "headcount": 1, "start_date": "2027-01-10",
+     "required_skills": ["bread baking", "food hygiene"],
+     "nice_to_have_skills": ["sourdough", "oven operation"],
+     "min_experience_years": 2, "min_english": "A2"},
+
+    {"id": "O4", "employer": "Shipyard, Western Norway", "country": "NO", "sector": "metal",
+     "occupation": "welder", "headcount": 2, "start_date": "2027-03-01",
+     "required_skills": ["MIG welding", "TIG welding"],
+     "nice_to_have_skills": ["steel fabrication"],
+     "min_experience_years": 3, "min_english": "B1"}
+  ]
+}
