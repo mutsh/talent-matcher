@@ -33,7 +33,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - id: meta
-        uses: docker/metadata-action@v5      # lower-cases the repo name for GHCR
+        uses: docker/metadata-action@v6      # lower-cases the repo name for GHCR
         with:
           images: ghcr.io/${{ github.repository }}
           tags: |
